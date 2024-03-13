@@ -10,6 +10,9 @@ import Layout from "./Layout.jsx";
 import About from "./components/About/About.jsx";
 import Contact from "./components/ContactUs/ContactUs.jsx";
 import User from "./components/User/User.jsx";
+import Github, { githubInfoLoader } from "./components/Github/Github.jsx";
+
+
 
 // const router = createBrowserRouter([
 //   {
@@ -40,6 +43,8 @@ const router = createBrowserRouter(
       <Route path="/about" element={<About />} />
       <Route path="/ContactUs" element={<Contact />} />
       <Route path="user/:userid" element={<User />} />
+      {/* <Route path="/Github" element={<Github />} /> */}
+      <Route loader={githubInfoLoader} path="github" element={<Github />} />
     </Route>
   )
 );
